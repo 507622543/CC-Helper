@@ -1,0 +1,10 @@
+FROM node:20-slim
+
+# Install Claude Code CLI globally
+RUN npm install -g @anthropic-ai/claude-code@latest
+
+# Set working directory
+WORKDIR /workspace
+
+# Default: run claude in YOLO mode
+ENTRYPOINT ["claude", "--dangerously-skip-permissions"]

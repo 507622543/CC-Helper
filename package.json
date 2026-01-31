@@ -1,0 +1,55 @@
+{
+  "name": "cc-helper",
+  "version": "1.1.0",
+  "description": "A powerful Claude Code CLI helper with interactive UI, real-time status bar showing model info, token usage, and cost tracking",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "cc": "./index.js",
+    "cchelper": "./index.js"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "test-statusbar": "node test-statusbar.js",
+    "start": "node index.js",
+    "link": "npm link",
+    "unlink": "npm unlink -g"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "cli",
+    "ai",
+    "anthropic",
+    "helper",
+    "ccg",
+    "interactive",
+    "profile-manager",
+    "token-tracking",
+    "cost-monitoring",
+    "status-bar"
+  ],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-repo/cc-helper"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repo/cc-helper/issues"
+  },
+  "homepage": "https://github.com/your-repo/cc-helper#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.13.4",
+    "boxen": "^5.1.2",
+    "chalk": "^4.1.2",
+    "commander": "^14.0.2",
+    "conf": "^15.0.2",
+    "execa": "^5.1.1",
+    "inquirer": "^12.11.1"
+  }
+}
