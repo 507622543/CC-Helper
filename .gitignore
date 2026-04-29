@@ -1,9 +1,14 @@
 # Dependencies
 node_modules/
+web-next/node_modules/
+web-react/node_modules/
 
 # Logs
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # OS files
 .DS_Store
@@ -17,14 +22,29 @@ Thumbs.db
 
 # Config (contains sensitive data)
 config.json
-
-# Claude Code local settings (contains personal data)
+.env
+.env.*
+!.env.example
 .claude/
-CLAUDE.md
-
-# Test files
-test-*.js
+.cc-switch/
+*.db
+*.sqlite
+*.sqlite3
 
 # Temp files
 *.tmp
 .temp/
+.ace-tool/
+.npm-cache/
+nul
+
+# Backups and generated artifacts
+*.bak
+*.backup
+*.backup-*
+*.orig
+web-dist/
+dist/
+coverage/
+web-next/.next/
+web-react/dist/

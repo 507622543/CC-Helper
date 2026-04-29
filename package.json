@@ -1,16 +1,31 @@
 {
   "name": "cc-helper",
-  "version": "1.1.0",
-  "description": "A powerful Claude Code CLI helper with interactive UI, real-time status bar showing model info, token usage, and cost tracking",
+  "version": "1.2.0",
+  "description": "Claude Code CLI helper with profile management, CC Switch bridge, MCP services, sandbox mode, and status integration",
   "main": "index.js",
   "type": "module",
   "bin": {
     "cc": "./index.js",
     "cchelper": "./index.js"
   },
+  "files": [
+    "index.js",
+    "lib/*.js",
+    "!lib/*.backup-*",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "Dockerfile.yolo",
+    "migrate-cchelper-to-ccswitch.py",
+    "setup.js",
+    "setup.bat",
+    "setup.ps1",
+    "uninstall.js",
+    "cchelper.cmd",
+    "cchelper.ps1"
+  ],
   "scripts": {
-    "test": "node test.js",
-    "test-statusbar": "node test-statusbar.js",
+    "test": "node --check index.js && node --check lib/runner.js && node --check lib/ccswitch.js",
     "start": "node index.js",
     "link": "npm link",
     "unlink": "npm unlink -g"
@@ -33,12 +48,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-repo/cc-helper"
+    "url": "git+https://github.com/507622543/CC-Helper.git"
   },
   "bugs": {
-    "url": "https://github.com/your-repo/cc-helper/issues"
+    "url": "https://github.com/507622543/CC-Helper/issues"
   },
-  "homepage": "https://github.com/your-repo/cc-helper#readme",
+  "homepage": "https://github.com/507622543/CC-Helper#readme",
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=6.0.0"
